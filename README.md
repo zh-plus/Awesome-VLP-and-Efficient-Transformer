@@ -7,7 +7,7 @@
 NeurIPS 2019 [[paper]](https://arxiv.org/abs/1908.02265) [[code]](https://github.com/jiasenlu/vilbert_beta) *Facebook AI Research*
 
    - Architecture: Two stream :arrows_clockwise: **co-attentional transformer layers**
-     <img src="images\ViLBERT.png" style="zoom:43%;" />
+     <img src="images\ViLBERT.png" style="zoom:20%;" />
    - Pretrain dataset: Conceptual Captions (~3.3M)
    - Pretrain Tasks
      <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" style="zoom:43%;" />
