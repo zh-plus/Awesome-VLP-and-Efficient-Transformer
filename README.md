@@ -10,7 +10,7 @@ NeurIPS 2019 [[paper]](https://arxiv.org/abs/1908.02265) [[code]](https://github
      <img src="images\ViLBERT.png" style="zoom:20%;" />
    - Pretrain dataset: Conceptual Captions (~3.3M)
    - Pretrain Tasks
-     <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" style="zoom:43%;" />
+     <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" style="zoom:5%;" />
      - predicting the semantics of masked words and image regions given the unmasked inputs (Masked Multi-modal Modelling)
        **image**: Predict the semantic classes distribution using image  input/output with detection model, then minimize KL divergence between these two distributions.
        text: Same as BERT.
