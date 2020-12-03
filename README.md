@@ -91,8 +91,10 @@ EMNLP 2019 [[paper]](https://arxiv.org/abs/1908.07490) [[code]](https://github.c
    - Image feature (Fast R-CNN)
      - \<bounding box coordinates, 2048-d region-of-interest\>
      - projection
+     
        <img src="images\LXMERT_image_feature.png" width="200" />
    - Text feature
+
      <img src="images\LXMERT_text_feature.png" width="200" />
 
 
