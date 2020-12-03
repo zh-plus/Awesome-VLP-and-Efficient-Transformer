@@ -67,8 +67,10 @@ NeurIPS 2019 [[paper]](https://arxiv.org/abs/1908.02265) [[code]](https://github
    - Pretrain Tasks
      <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" width="800" />
      - predicting the semantics of masked words and image regions given the unmasked inputs (Masked Multi-modal Modelling)
+       
        **image**: Predict the semantic classes distribution using image  input/output with detection model, then minimize KL divergence between these two distributions.
-       text: Same as BERT.
+       
+       **text**: Same as BERT.
      - predicting whether an image and text segment correspond (Multi-modal Alignment) **with [IMG] and [CLS] output**
    - Image feature (Fast R-CNN)
      - \<image coordinates (4), area fraction, visual feature\> from pretrained object detection network
@@ -101,7 +103,7 @@ EMNLP 2019 [[paper]](https://arxiv.org/abs/1908.07490) [[code]](https://github.c
 
 #### VL-BERT: Pre-training of Generic Visual-Linguistic Representations
 
-ICLR 2020 [[paper]]((https://arxiv.org/abs/1908.08530)) [[code]](https://github.com/jackroos/VL-BERT) *USTC & MSRA*
+ICLR 2020 [[paper]](https://arxiv.org/abs/1908.08530) [[code]](https://github.com/jackroos/VL-BERT) *USTC & MSRA*
 
    - Architecture: Single stream BERT
      <img src="images\VLBert.png" style="zoom:43%;" />
@@ -111,6 +113,7 @@ ICLR 2020 [[paper]]((https://arxiv.org/abs/1908.08530)) [[code]](https://github.
    - Pretrain Tasks
 
      - MLM, Masked RoI Classification with Linguistic Clues
+     - They claim that **Cross-modality Matching** is of no use.
 
    - Features
 
@@ -149,12 +152,12 @@ arXiv 2019/08, ACL 2020 [[paper]](https://arxiv.org/abs/1908.03557)  [[code]](ht
 
 #### Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training
 
-AAAI 2020 [[paper]]((https://arxiv.org/abs/1908.06066))
+AAAI 2020 [[paper]](https://arxiv.org/abs/1908.06066)
 
    - Architecture: Single stream BERT
      <img src="images\Unicoder-VL.png" style="zoom:43%;" />
 
-   - Pretrain dataset:
+   - Pretrain dataset: Conceptual Captions (3M) + SUB Captions (0.8M)
 
    - Pretrain tasks
 
@@ -176,13 +179,13 @@ AAAI 2020, [[code]](https://github.com/LuoweiZhou/VLP), (**VLP**)
 
 #### UNITER: Learning Universal Image-text Representations
 
-ECCV 2020 [[paper]]((https://arxiv.org/abs/1909.11740)) [[code]](https://github.com/ChenRocks/UNITER)
+ECCV 2020 [[paper]](https://arxiv.org/abs/1909.11740) [[code]](https://github.com/ChenRocks/UNITER)
 
 
 
 #### Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks
 
-arXiv 2020/04, ECCV 2020 [[paper]]((https://arxiv.org/pdf/2004.06165.pdf)) [[code]](https://github.com/microsoft/Oscar)
+arXiv 2020/04, ECCV 2020 [[paper]](https://arxiv.org/pdf/2004.06165.pdf) [[code]](https://github.com/microsoft/Oscar)
 
 
 ---
@@ -208,7 +211,7 @@ ICCV 2020 [[paper]](http://openaccess.thecvf.com/content_CVPR_2020/html/Wei_Mult
 
 #### 12-in-1: Multi-Task Vision and Language Representation Learning
 
-CVPR 2020 [[paper]]((https://arxiv.org/abs/1912.02315)) [[code]](https://github.com/facebookresearch/vilbert-multi-task) Multi-task Learning
+CVPR 2020 [[paper]](https://arxiv.org/abs/1912.02315) [[code]](https://github.com/facebookresearch/vilbert-multi-task) Multi-task Learning
 
 #### Are we pretraining it right? Digging deeper into visio-linguistic pretraining
 
