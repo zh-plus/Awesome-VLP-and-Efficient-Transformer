@@ -185,7 +185,7 @@ ECCV 2020 [[paper]]((https://arxiv.org/abs/1909.11740)) [[code]](https://github.
 arXiv 2020/04, ECCV 2020 [[paper]]((https://arxiv.org/pdf/2004.06165.pdf)) [[code]](https://github.com/microsoft/Oscar)
 
 
-
+---
 
 
 ### Image-Text Retrieval & Matching
@@ -202,7 +202,7 @@ ICLR 2021 submission. [[paper]](https://openreview.net/forum?id=bW9SYKHcZiz)
 
 ICCV 2020 [[paper]](http://openaccess.thecvf.com/content_CVPR_2020/html/Wei_Multi-Modality_Cross_Attention_Network_for_Image_and_Sentence_Matching_CVPR_2020_paper.html)
 
-
+---
 
 ### Analysis
 
@@ -221,9 +221,7 @@ arXiv 2020/05, ECCV 2020 Spotlight [[paper]](https://arxiv.org/abs/2005.07310) I
 
 ACL SRW 2020 [[paper]](https://arxiv.org/abs/2005.07486) Adaptive Transformer Analysis
 
-
-
-
+---
 
 ### Survey
 
@@ -243,7 +241,7 @@ arXiv 2019 [[paper]](https://arxiv.org/abs/1907.09358)
 
 arXiv 2019 [[paper]](https://ieeexplore.ieee.org/abstract/document/8715409)
 
-
+---
 
 ### Platforms
 
@@ -333,7 +331,7 @@ arXiv 2019/12 [[paper]](https://arxiv.org/abs/1912.12180) [[code]](https://githu
 
 ICLR 2021 under review [[paper]](https://arxiv.org/abs/2010.11929)  [[code1]](https://github.com/google-research/vision_transformer) [[code2]](https://github.com/lucidrains/vit-pytorch)
 
-
+---
 
 ### Survey
 
