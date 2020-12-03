@@ -1,3 +1,58 @@
+- [Vision Language Models](#vision-language-models)
+  - [Vision-Language Pretraining](#vision-language-pretraining)
+      - [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](#vilbert-pretraining-task-agnostic-visiolinguistic-representations-for-vision-and-language-tasks)
+      - [LXMERT: Learning Cross-Modality Encoder Representations from Transformers](#lxmert-learning-cross-modality-encoder-representations-from-transformers)
+      - [VL-BERT: Pre-training of Generic Visual-Linguistic Representations](#vl-bert-pre-training-of-generic-visual-linguistic-representations)
+      - [VisualBERT: A Simple and Performant Baseline for Vision and Language](#visualbert-a-simple-and-performant-baseline-for-vision-and-language)
+      - [Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training](#unicoder-vl-a-universal-encoder-for-vision-and-language-by-cross-modal-pre-training)
+      - [Unified Vision-Language Pre-Training for Image Captioning and VQA](#unified-vision-language-pre-training-for-image-captioning-and-vqa)
+      - [UNITER: Learning Universal Image-text Representations](#uniter-learning-universal-image-text-representations)
+      - [Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks](#oscar-object-semantics-aligned-pre-training-for-vision-language-tasks)
+  - [Image-Text Retrieval & Matching](#image-text-retrieval--matching)
+      - [ImageBERT: Cross-Modal Pre-training with Large-scale Weak-supervised Image-text Data](#imagebert-cross-modal-pre-training-with-large-scale-weak-supervised-image-text-data)
+      - [Cross-Probe BERT for Efficient AND effective Cross-Modal Search](#cross-probe-bert-for-efficient-and-effective-cross-modal-search)
+      - [Multi-Modality Cross Attention Network for Image and Sentence Matching](#multi-modality-cross-attention-network-for-image-and-sentence-matching)
+  - [Analysis](#analysis)
+      - [12-in-1: Multi-Task Vision and Language Representation Learning](#12-in-1-multi-task-vision-and-language-representation-learning)
+      - [Are we pretraining it right? Digging deeper into visio-linguistic pretraining](#are-we-pretraining-it-right-digging-deeper-into-visio-linguistic-pretraining)
+      - [Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models](#behind-the-scene-revealing-the-secrets-of-pre-trained-vision-and-language-models)
+      - [Adaptive Transformers for Learning Multimodal Representations](#adaptive-transformers-for-learning-multimodal-representations)
+  - [Survey](#survey)
+      - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey)
+      - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings)
+      - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods)
+      - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey)
+  - [Platforms](#platforms)
+      - [facebook MMF](#facebook-mmf)
+- [Transformer](#transformer)
+  - [X-formers](#x-formers)
+      - [Performer: "Rethinking Attention with Performers"](#performer-rethinking-attention-with-performers)
+      - [Linformer: "Self-Attention with Linear Complexity"](#linformer-self-attention-with-linear-complexity)
+      - [Linear Transformer: "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention"](#linear-transformer-transformers-are-rnns-fast-autoregressive-transformers-with-linear-attention)
+      - [Synthesizer: "Neural Speech Synthesis with Transformer Network"](#synthesizer-neural-speech-synthesis-with-transformer-network)
+      - [Sinkhorn Transformer: "Sparse Sinkhorn Attention"](#sinkhorn-transformer-sparse-sinkhorn-attention)
+      - [Reformer: The Efficient Transformer](#reformer-the-efficient-transformer)
+      - [Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](#transformer-xl-attentive-language-models-beyond-a-fixed-length-context)
+      - [Compressive Transformers for Long-Range Sequence Modelling](#compressive-transformers-for-long-range-sequence-modelling)
+      - [Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks](#set-transformer-a-framework-for-attention-based-permutation-invariant-neural-networks)
+      - [Longformer: The Long-Document Transformer](#longformer-the-long-document-transformer)
+      - [Routing Transformer: Efficient Content-Based Sparse Attention with Routing Transformers](#routing-transformer-efficient-content-based-sparse-attention-with-routing-transformers)
+      - [Big Bird: Transformers for Longer Sequences](#big-bird-transformers-for-longer-sequences)
+      - [Etc: Encoding long and structured data in transformers](#etc-encoding-long-and-structured-data-in-transformers)
+      - [Memory Compressed: Generating Wikipedia by Summarizing Long Sequences](#memory-compressed-generating-wikipedia-by-summarizing-long-sequences)
+      - [Blockwise Transformer: "Blockwise Self-Attention for Long Document Understanding"](#blockwise-transformer-blockwise-self-attention-for-long-document-understanding)
+      - [Image Transformer](#image-transformer)
+      - [Sparse Transformer: Generating Long Sequences with Sparse Transformers](#sparse-transformer-generating-long-sequences-with-sparse-transformers)
+      - [Axial Transformer: "Axial Attention in Multidimensional Transformers"](#axial-transformer-axial-attention-in-multidimensional-transformers)
+      - [ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](#vit-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale)
+  - [Survey](#survey-1)
+      - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey-1)
+      - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings-1)
+      - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods-1)
+      - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey-1)
+      - [Multimodal Machine Learning: A Survey and Taxonomy](#multimodal-machine-learning-a-survey-and-taxonomy)
+
+
 ## Vision Language Models
 
 ### Vision-Language Pretraining
@@ -7,10 +62,10 @@
 NeurIPS 2019 [[paper]](https://arxiv.org/abs/1908.02265) [[code]](https://github.com/jiasenlu/vilbert_beta) *Facebook AI Research*
 
    - Architecture: Two stream :arrows_clockwise: **co-attentional transformer layers**
-     <img src="images\ViLBERT.png" style="zoom:20%;" />
+     <img src="images\ViLBERT.png" width="400"  />
    - Pretrain dataset: Conceptual Captions (~3.3M)
    - Pretrain Tasks
-     <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" style="zoom:5%;" />
+     <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" width="800" />
      - predicting the semantics of masked words and image regions given the unmasked inputs (Masked Multi-modal Modelling)
        **image**: Predict the semantic classes distribution using image  input/output with detection model, then minimize KL divergence between these two distributions.
        text: Same as BERT.
@@ -36,9 +91,9 @@ EMNLP 2019 [[paper]](https://arxiv.org/abs/1908.07490) [[code]](https://github.c
    - Image feature (Fast R-CNN)
      - \<bounding box coordinates, 2048-d region-of-interest\>
      - projection
-       <img src="images\LXMERT_image_feature.png" style="zoom:43%;" />
+       <img src="images\LXMERT_image_feature.png" width="200" />
    - Text feature
-     <img src="images\LXMERT_text_feature.png" style="zoom:43%;" />
+     <img src="images\LXMERT_text_feature.png" width="200" />
 
 
 
@@ -60,7 +115,7 @@ ICLR 2020 [[paper]]((https://arxiv.org/abs/1908.08530)) [[code]](https://github.
      - Visual Feature Embedding (Fast R-CNN)
        - visual appearance embedding: 2048-d feature
          For **Non-visual elements**, they're obtained by RoI covering the whole input image.
-       - visual geometry embedding: $(\frac{x_{LT}}{W}, \frac{y_{LT}}{H}, \frac{x_{RB}}{W}, \frac{y_{RB}}{H})$ -> 2048-d representation by computing sine and cosine of different wavelengths according to "Relation networks for object detection"
+       - visual geometry embedding: <!-- $(\frac{x_{LT}}{W}, \frac{y_{LT}}{H}, \frac{x_{RB}}{W}, \frac{y_{RB}}{H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_%7BLT%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BLT%7D%7D%7BH%7D%2C%20%5Cfrac%7Bx_%7BRB%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BRB%7D%7D%7BH%7D)"> to 2048-d representation by computing sine and cosine of different wavelengths according to "Relation networks for object detection"
 
      - Token Embedding
        - WordPiece Embedding
@@ -106,7 +161,7 @@ AAAI 2020 [[paper]]((https://arxiv.org/abs/1908.06066))
    - Features
      - Image feature (Fast R-CNN)
        - [IMG] token + segment embedding + position embedding + next term
-       - $(\frac{x_1}{W}, \frac{y_1}{H}, \frac{x_2}{W}, \frac{y_2}{H}, \frac{(y_2-y_1)(x_2-x_1)}{W\cdot H})$, visual feature --separately--> embedding space using FC, then added up
+       - <!-- $(\frac{x_1}{W}, \frac{y_1}{H}, \frac{x_2}{W}, \frac{y_2}{H}, \frac{(y_2-y_1)(x_2-x_1)}{W\cdot H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_1%7D%7BW%7D%2C%20%5Cfrac%7By_1%7D%7BH%7D%2C%20%5Cfrac%7Bx_2%7D%7BW%7D%2C%20%5Cfrac%7By_2%7D%7BH%7D%2C%20%5Cfrac%7B(y_2-y_1)(x_2-x_1)%7D%7BW%5Ccdot%20H%7D)">, visual feature --separately--> embedding space using FC, then added up
      - Text feature: same as BERT
 
 
@@ -137,7 +192,7 @@ arXiv 2020/04, ECCV 2020 [[paper]]((https://arxiv.org/pdf/2004.06165.pdf)) [[cod
 
 arXiv 2020/01 [[paper]](https://arxiv.org/abs/2001.07966)
 
-##### CROSS-PROBE BERT FOR EFFICIENT AND EFFECTIVE CROSS-MODAL SEARCH
+##### Cross-Probe BERT for Efficient AND effective Cross-Modal Search
 
 ICLR 2021 submission. [[paper]](https://openreview.net/forum?id=bW9SYKHcZiz)
 
