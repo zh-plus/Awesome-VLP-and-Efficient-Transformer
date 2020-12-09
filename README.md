@@ -25,12 +25,12 @@
   - [Platforms](#platforms)
     - [facebook MMF](#facebook-mmf)
 - [Transformer](#transformer)
-  - [X-formers](#x-formers)
-    - [Performer: "Rethinking Attention with Performers"](#performer-rethinking-attention-with-performers)
-    - [Linformer: "Self-Attention with Linear Complexity"](#linformer-self-attention-with-linear-complexity)
-    - [Linear Transformer: "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention"](#linear-transformer-transformers-are-rnns-fast-autoregressive-transformers-with-linear-attention)
-    - [Synthesizer: "Neural Speech Synthesis with Transformer Network"](#synthesizer-neural-speech-synthesis-with-transformer-network)
-    - [Sinkhorn Transformer: "Sparse Sinkhorn Attention"](#sinkhorn-transformer-sparse-sinkhorn-attention)
+  - [Efficient Transformers](#efficient-transformers)
+    - [Performer: Rethinking Attention with Performers](#performer-rethinking-attention-with-performers)
+    - [Linformer: Self-Attention with Linear Complexity](#linformer-self-attention-with-linear-complexity)
+    - [Linear Transformer: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention](#linear-transformer-transformers-are-rnns-fast-autoregressive-transformers-with-linear-attention)
+    - [Synthesizer: Neural Speech Synthesis with Transformer Network](#synthesizer-neural-speech-synthesis-with-transformer-network)
+    - [Sinkhorn Transformer: Sparse Sinkhorn Attention](#sinkhorn-transformer-sparse-sinkhorn-attention)
     - [Reformer: The Efficient Transformer](#reformer-the-efficient-transformer)
     - [Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](#transformer-xl-attentive-language-models-beyond-a-fixed-length-context)
     - [Compressive Transformers for Long-Range Sequence Modelling](#compressive-transformers-for-long-range-sequence-modelling)
@@ -256,25 +256,60 @@ https://github.com/facebookresearch/mmf
 
 ## Transformer
 
-### X-formers
+### Efficient Transformers
 
-#### Performer: "Rethinking Attention with Performers"
+1. Fixed Patterns
+   
+   [Image Transformer](#image-transformer)
+   - Blockwise Patterns
+   - Strided Patterns
+   - Compressed Patterns
+2. Combination of Patterns
 
-arXiv 2020/09 [[paper]](https://arxiv.org/abs/2009.14794)  [[code]](https://github.com/lucidrains/performer-pytorch) *Google & University of Cambreidge & DeepMind & Alan Turing Institute*
+   Combining two or more distinct access patterns. 
+3. Learnable Patterns
 
-#### Linformer: "Self-Attention with Linear Complexity"
+   [Reformer: The Efficient Transformer](#reformer-the-efficient-transformer)
+
+   Opposite to the Fixed Patterns, learnable patterns aim to learn the access pattern in a data-driven fashion.
+4. Memory
+
+   Leverage a side memory module to access multiple tokens at once.
+5. Low-Rank Methods 
+
+   [Linformer: Self-Attention with Linear Complexity](#linformer-self-attention-with-linear-complexity)
+
+   Leverage low-rank approximations of the self-attention matrix.
+6. Kernels
+   
+   View the attention mechanism through kernelization, which enable clever mathematical re-writing of self-attention mechanism to avoid explicitly computing the N*N matrix. Can be view as low-rank method.
+7. Recurrence
+
+   A natural extension to the blockwise method is to connect these blocks via recurrence.
+
+   
+
+#### Performer: Rethinking Attention with Performers
+
+arXiv 2020/09 [[paper]](https://arxiv.org/abs/2009.14794)  [[code]](https://github.com/lucidrains/performer-pytorch) *Google & University of Cambridge & DeepMind & Alan Turing Institute*
+
+#### Linformer: Self-Attention with Linear Complexity
 
 arXiv 2020/06 [[paper]](https://arxiv.org/pdf/2006.04768.pdf)  [[code]](https://github.com/tatp22/linformer-pytorch) *FAIR* 
 
-#### Linear Transformer: "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention"
+- Tasks: Natural language understanding and downstream tasks.
+- Contribution: Projecting (N, d) Key and Value to (k, d).
+- Complexity: O(n)
 
-ICML 2020 [[paper]](https://arxiv.org/abs/2006.16236)  [[code]](https://github.com/lucidrains/linear-attention-transformer) *Idiap Research Institut*
+#### Linear Transformer: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention
 
-#### Synthesizer: "Neural Speech Synthesis with Transformer Network"
+ICML 2020 [[paper]](https://arxiv.org/abs/2006.16236)  [[code]](https://github.com/lucidrains/linear-attention-transformer) *Idiap Research Institute*
+
+#### Synthesizer: Neural Speech Synthesis with Transformer Network
 
 arXiv 2019/02 [[paper]](https://arxiv.org/abs/1809.08895)  [[code]](https://github.com/soobinseo/Transformer-TTS) *UESTC, MSRA*
 
-#### Sinkhorn Transformer: "Sparse Sinkhorn Attention"
+#### Sinkhorn Transformer: Sparse Sinkhorn Attention
 
 arXiv 2020/02 [[paper]](https://arxiv.org/abs/2002.11296)  [[code]](https://github.com/lucidrains/sinkhorn-transformer) *Google AI*
 
@@ -321,6 +356,14 @@ arXiv 2020/10 [[paper]](https://arxiv.org/abs/1911.02972)  [[code]](https://gith
 #### Image Transformer
 
 ICML 2018 [[paper]](https://arxiv.org/abs/1802.05751)  [[code1]](https://github.com/sahajgarg/image_transformer) [[code2]](https://github.com/tensorflow/tensor2tensor/) *Google Brain, UCB, Google AI*
+
+![](images/2020-12-10-01-15-11.png)
+
+- Tasks: Image Generation and Super Resolution
+- Contribution:
+  - Query Block split & 2 Local Attention
+- Complexity: O(nm), where n is the length of flatted image, m is the memory length.
+
 
 #### Sparse Transformer: Generating Long Sequences with Sparse Transformers
 
