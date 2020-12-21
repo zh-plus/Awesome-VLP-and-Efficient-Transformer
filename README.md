@@ -46,6 +46,8 @@
     - [Axial Transformer: Axial Attention in Multidimensional Transformers [arXiv 2019/12]](#axial-transformer-axial-attention-in-multidimensional-transformers-arxiv-201912)
   - [Image Transformers](#image-transformers)
     - [ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Under review of ICLR 2021]](#vit-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale-under-review-of-iclr-2021)
+  - [Transformer Visualizations](#transformer-visualizations)
+    - [Transformer Interpretability Beyond Attention Visualization [Arxiv 2020/12]](#transformer-interpretability-beyond-attention-visualization-arxiv-202012)
   - [Survey](#survey-1)
     - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey-1)
     - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings-1)
@@ -438,7 +440,15 @@ https://github.com/facebookresearch/mmf
 
 #### ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Under review of ICLR 2021]
 
-[[paper]](https://arxiv.org/abs/2010.11929)  [[code1]](https://github.com/google-research/vision_transformer) [[code2]](https://github.com/lucidrains/vit-pytorch)
+[[paper]](https://arxiv.org/abs/2010.11929)  [[code1]](https://github.com/google-research/vision_transformer) [[code2]](https://github.com/lucidrains/vit-pytorch) *Google*
+
+---
+
+### Transformer Visualizations
+
+#### Transformer Interpretability Beyond Attention Visualization [Arxiv 2020/12]
+
+[[paper]](https://arxiv.org/abs/2012.09838)  [[code]](https://github.com/hila-chefer/Transformer-Explainability) *FAIR*
 
 ---
 
