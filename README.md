@@ -8,6 +8,10 @@
     - [Unified Vision-Language Pre-Training for Image Captioning and VQA [AAAI 2020]](#unified-vision-language-pre-training-for-image-captioning-and-vqa-aaai-2020)
     - [UNITER: Learning Universal Image-text Representations [ECCV 2020]](#uniter-learning-universal-image-text-representations-eccv-2020)
     - [Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks [arXiv 2020/04, ECCV 2020]](#oscar-object-semantics-aligned-pre-training-for-vision-language-tasks-arxiv-202004-eccv-2020)
+  - [Video-Language Pretraining](#video-language-pretraining)
+    - [VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]](#videobert-a-joint-model-for-video-and-language-representation-learning-iccv-2019)
+    - [HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]](#hero-hierarchical-encoder-for-videolanguage-omni-representation-pre-training-emnlp-2020)
+    - [UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation](#univl-a-unified-video-and-language-pre-training-model-for-multimodal-understanding-and-generation)
   - [Image-Text Retrieval & Matching](#image-text-retrieval--matching)
     - [ImageBERT: Cross-Modal Pre-training with Large-scale Weak-supervised Image-text Data](#imagebert-cross-modal-pre-training-with-large-scale-weak-supervised-image-text-data)
     - [Cross-Probe BERT for Efficient AND effective Cross-Modal Search](#cross-probe-bert-for-efficient-and-effective-cross-modal-search)
@@ -18,10 +22,13 @@
     - [Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models](#behind-the-scene-revealing-the-secrets-of-pre-trained-vision-and-language-models)
     - [Adaptive Transformers for Learning Multimodal Representations [ACL 2020]](#adaptive-transformers-for-learning-multimodal-representations-acl-2020)
   - [Survey](#survey)
-    - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey)
-    - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings)
-    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods)
-    - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey)
+    - [Pre-trained Models for Natural Language Processing: A Survey [arXiv 2020/03]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-202003)
+    - [A Survey on Contextual Embeddings [arXiv 2020/03]](#a-survey-on-contextual-embeddings-arxiv-202003)
+    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods [arXiv 2019]](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods-arxiv-2019)
+    - [Deep Multimodal Representation Learning: A Survey [arXiv 2019]](#deep-multimodal-representation-learning-a-survey-arxiv-2019)
+    - [Pre-trained models for natural language processing: A survey [arXiv 2020]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-2020)
+    - [A Survey on Visual Transformer [arXiv 2020/12]](#a-survey-on-visual-transformer-arxiv-202012)
+    - [Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]](#learning-transferable-visual-models-from-natural-language-supervision-openai-papers-202101)
   - [Platforms](#platforms)
     - [facebook MMF](#facebook-mmf)
 - [Transformer](#transformer)
@@ -49,10 +56,10 @@
   - [Transformer Visualizations](#transformer-visualizations)
     - [Transformer Interpretability Beyond Attention Visualization [Arxiv 2020/12]](#transformer-interpretability-beyond-attention-visualization-arxiv-202012)
   - [Survey](#survey-1)
-    - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey-1)
-    - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings-1)
-    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods-1)
-    - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey-1)
+    - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey)
+    - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings)
+    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods)
+    - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey)
     - [Multimodal Machine Learning: A Survey and Taxonomy](#multimodal-machine-learning-a-survey-and-taxonomy)
 
 
@@ -193,6 +200,25 @@
 
 ---
 
+### Video-Language Pretraining
+
+#### VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]
+
+[[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)
+
+
+#### HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]
+
+[[paper]](https://www.aclweb.org/anthology/2020.emnlp-main.161.pdf) [[code]](https://github.com/linjieli222/HERO)
+
+#### UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation 
+
+[[paper]](https://arxiv.org/abs/2002.06353)
+
+
+
+---
+
 
 ### Image-Text Retrieval & Matching
 
@@ -231,21 +257,33 @@ arXiv 2020/05, ECCV 2020 Spotlight [[paper]](https://arxiv.org/abs/2005.07310) I
 
 ### Survey
 
-#### Pre-trained Models for Natural Language Processing: A Survey 
+#### Pre-trained Models for Natural Language Processing: A Survey [arXiv 2020/03]
 
-arXiv 2020/03 [[paper]](https://arxiv.org/abs/2003.08271)
+[[paper]](https://arxiv.org/abs/2003.08271)
 
-#### A Survey on Contextual Embeddings
+#### A Survey on Contextual Embeddings [arXiv 2020/03]
 
-arXiv 2020/03 [[paper]](https://arxiv.org/abs/2003.07278)
+[[paper]](https://arxiv.org/abs/2003.07278)
 
-#### Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods 
+#### Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods [arXiv 2019]
 
-arXiv 2019 [[paper]](https://arxiv.org/abs/1907.09358)
+[[paper]](https://arxiv.org/abs/1907.09358)
 
-#### Deep Multimodal Representation Learning: A Survey 
+#### Deep Multimodal Representation Learning: A Survey [arXiv 2019]
 
-arXiv 2019 [[paper]](https://ieeexplore.ieee.org/abstract/document/8715409)
+[[paper]](https://ieeexplore.ieee.org/abstract/document/8715409)
+
+#### Pre-trained models for natural language processing: A survey [arXiv 2020]
+
+[[paper]](https://arxiv.org/abs/2003.08271)
+
+#### A Survey on Visual Transformer [arXiv 2020/12]
+
+[[paper]](https://arxiv.org/abs/2012.12556)
+
+#### Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]
+
+[[paper]](https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language.pdf)
 
 ---
 
