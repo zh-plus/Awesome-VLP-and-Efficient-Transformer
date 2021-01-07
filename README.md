@@ -200,7 +200,7 @@
 
 #### Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]
 
-[[paper]](https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language.pdf)
+[[paper]](https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language.pdf) [[blog]](https://openai.com/blog/clip/) [[code]](https://github.com/openai/CLIP)
 
 
 ---
