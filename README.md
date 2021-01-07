@@ -8,6 +8,7 @@
     - [Unified Vision-Language Pre-Training for Image Captioning and VQA [AAAI 2020]](#unified-vision-language-pre-training-for-image-captioning-and-vqa-aaai-2020)
     - [UNITER: Learning Universal Image-text Representations [ECCV 2020]](#uniter-learning-universal-image-text-representations-eccv-2020)
     - [Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks [arXiv 2020/04, ECCV 2020]](#oscar-object-semantics-aligned-pre-training-for-vision-language-tasks-arxiv-202004-eccv-2020)
+    - [Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]](#learning-transferable-visual-models-from-natural-language-supervision-openai-papers-202101)
   - [Video-Language Pretraining](#video-language-pretraining)
     - [VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]](#videobert-a-joint-model-for-video-and-language-representation-learning-iccv-2019)
     - [HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]](#hero-hierarchical-encoder-for-videolanguage-omni-representation-pre-training-emnlp-2020)
@@ -28,7 +29,6 @@
     - [Deep Multimodal Representation Learning: A Survey [arXiv 2019]](#deep-multimodal-representation-learning-a-survey-arxiv-2019)
     - [Pre-trained models for natural language processing: A survey [arXiv 2020]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-2020)
     - [A Survey on Visual Transformer [arXiv 2020/12]](#a-survey-on-visual-transformer-arxiv-202012)
-    - [Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]](#learning-transferable-visual-models-from-natural-language-supervision-openai-papers-202101)
   - [Platforms](#platforms)
     - [facebook MMF](#facebook-mmf)
 - [Transformer](#transformer)
@@ -198,6 +198,11 @@
 [[paper]](https://arxiv.org/pdf/2004.06165.pdf) [[code]](https://github.com/microsoft/Oscar)
 
 
+#### Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]
+
+[[paper]](https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language.pdf)
+
+
 ---
 
 ### Video-Language Pretraining
@@ -280,10 +285,6 @@ arXiv 2020/05, ECCV 2020 Spotlight [[paper]](https://arxiv.org/abs/2005.07310) I
 #### A Survey on Visual Transformer [arXiv 2020/12]
 
 [[paper]](https://arxiv.org/abs/2012.12556)
-
-#### Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]
-
-[[paper]](https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language.pdf)
 
 ---
 
