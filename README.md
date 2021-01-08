@@ -11,6 +11,7 @@
     - [Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]](#learning-transferable-visual-models-from-natural-language-supervision-openai-papers-202101)
   - [Video-Language Pretraining](#video-language-pretraining)
     - [VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]](#videobert-a-joint-model-for-video-and-language-representation-learning-iccv-2019)
+    - [Multi-modal Transformer for Video Retrieval [ECCV 2020]](#multi-modal-transformer-for-video-retrieval-eccv-2020)
     - [HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]](#hero-hierarchical-encoder-for-videolanguage-omni-representation-pre-training-emnlp-2020)
     - [UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation](#univl-a-unified-video-and-language-pre-training-model-for-multimodal-understanding-and-generation)
   - [Image-Text Retrieval & Matching](#image-text-retrieval--matching)
@@ -210,6 +211,11 @@
 #### VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]
 
 [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)
+
+
+#### Multi-modal Transformer for Video Retrieval [ECCV 2020]
+
+[[paper]](https://arxiv.org/abs/2007.10639) [[code]](https://github.com/gabeur/mmt)
 
 
 #### HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]
