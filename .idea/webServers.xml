@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3488b91b-72d2-4bf9-83bb-f1d536ffab52" name="vision-language-paper-reading">
+        <fileTransfer rootFolder="/home/zhengf/zhenghao/vlt/vision-language-paper-reading" accessType="SFTP" host="10.20.111.5" port="22" sshConfigId="5766a4fa-c20e-4748-ae94-ea9bd4e6fe7b" sshConfig="zhengf@10.20.111.5:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
