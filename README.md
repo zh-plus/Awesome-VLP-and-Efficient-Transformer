@@ -18,11 +18,13 @@
     - [ImageBERT: Cross-Modal Pre-training with Large-scale Weak-supervised Image-text Data](#imagebert-cross-modal-pre-training-with-large-scale-weak-supervised-image-text-data)
     - [Cross-Probe BERT for Efficient AND effective Cross-Modal Search](#cross-probe-bert-for-efficient-and-effective-cross-modal-search)
     - [Multi-Modality Cross Attention Network for Image and Sentence Matching [ICCV 2020]](#multi-modality-cross-attention-network-for-image-and-sentence-matching-iccv-2020)
+  - [Thinking Fast and Slow: Efficient Text-to-Visual Retrieval with Transformers [CVPR 2021]](#thinking-fast-and-slow-efficient-text-to-visual-retrieval-with-transformers-cvpr-2021)
   - [Analysis](#analysis)
     - [12-in-1: Multi-Task Vision and Language Representation Learning [CVPR 2020]](#12-in-1-multi-task-vision-and-language-representation-learning-cvpr-2020)
     - [Are we pretraining it right? Digging deeper into visio-linguistic pretraining](#are-we-pretraining-it-right-digging-deeper-into-visio-linguistic-pretraining)
     - [Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models](#behind-the-scene-revealing-the-secrets-of-pre-trained-vision-and-language-models)
     - [Adaptive Transformers for Learning Multimodal Representations [ACL 2020]](#adaptive-transformers-for-learning-multimodal-representations-acl-2020)
+    - [Data, Architecture, or Losses: What Contributes Most to Multimodal Transformer Success? [TACL 2021]](#data-architecture-or-losses-what-contributes-most-to-multimodal-transformer-success-tacl-2021)
   - [Survey](#survey)
     - [Pre-trained Models for Natural Language Processing: A Survey [arXiv 2020/03]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-202003)
     - [A Survey on Contextual Embeddings [arXiv 2020/03]](#a-survey-on-contextual-embeddings-arxiv-202003)
@@ -248,6 +250,9 @@ ICLR 2021 submission. [[paper]](https://openreview.net/forum?id=bW9SYKHcZiz)
 
 [[paper]](http://openaccess.thecvf.com/content_CVPR_2020/html/Wei_Multi-Modality_Cross_Attention_Network_for_Image_and_Sentence_Matching_CVPR_2020_paper.html)
 
+### Thinking Fast and Slow: Efficient Text-to-Visual Retrieval with Transformers [CVPR 2021]
+[[paper]](https://arxiv.org/abs/2103.16553) 
+
 ---
 
 ### Analysis
@@ -266,6 +271,10 @@ arXiv 2020/05, ECCV 2020 Spotlight [[paper]](https://arxiv.org/abs/2005.07310) I
 #### Adaptive Transformers for Learning Multimodal Representations [ACL 2020]
 
 [[paper]](https://arxiv.org/abs/2005.07486) Adaptive Transformer Analysis
+
+#### Data, Architecture, or Losses: What Contributes Most to Multimodal Transformer Success? [TACL 2021]
+
+[[paper]](https://128.84.4.15/pdf/2102.00529.pdf)
 
 ---
 
