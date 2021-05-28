@@ -520,7 +520,7 @@ https://github.com/facebookresearch/mmf
     <img src="images\TransGAN.png" style="zoom:43%;" />
     
     - Up-sampling in Generator: **pixelshuffle** module from "Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network (CVPR 2016)"
-    <img src="images\PixelShuffle.png" style="zoom:43%;" />
+    <img src="images\pixelShuffle.png" style="zoom:43%;" />
     
 2. Tricks
     - Data augmentation
