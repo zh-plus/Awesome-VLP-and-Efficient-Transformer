@@ -57,6 +57,10 @@
   - [Image Transformers](#image-transformers)
     - [ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Under review of ICLR 2021]](#vit-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale-under-review-of-iclr-2021)
     - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Arxiv 2021/03]](#swin-transformer-hierarchical-vision-transformer-using-shifted-windows-arxiv-202103)
+  - [Transformer GAN](#transformer-gan)
+    - [TransGAN: Two Transformers Can Make One Strong GAN [Arxiv 2021/02]](#transgan-two-transformers-can-make-one-strong-gan-arxiv-202102)
+    - [GANsformer: Generative Adversarial Transformers [Arxiv 2021/03]](#gansformer-generative-adversarial-transformers-arxiv-202103)
+    - [TFill: Image Completion via a Transformer-Based Architecture [Arxiv 2021/04]](#tfill-image-completion-via-a-transformer-based-architecture-arxiv-202104)
   - [Transformer Visualizations](#transformer-visualizations)
     - [Transformer Interpretability Beyond Attention Visualization [Arxiv 2020/12]](#transformer-interpretability-beyond-attention-visualization-arxiv-202012)
   - [Transformer Internal Essence](#transformer-internal-essence)
@@ -83,16 +87,16 @@
    - Pretrain Tasks
      <img src="images\ViLBERT_pretrain.png" alt="ViLBERT_pretrain" width="800" />
      - predicting the semantics of masked words and image regions given the unmasked inputs (Masked Multi-modal Modelling)
-       
-       **image**: Predict the semantic classes distribution using image  input/output with detection model, then minimize KL divergence between these two distributions.
-       
-       **text**: Same as BERT.
+     
+     **image**: Predict the semantic classes distribution using image  input/output with detection model, then minimize KL divergence between these two distributions.
+     
+     **text**: Same as BERT.
      - predicting whether an image and text segment correspond (Multi-modal Alignment) **with [IMG] and [CLS] output**
    - Image feature (Fast R-CNN)
      - \<image coordinates (4), area fraction, visual feature\> from pretrained object detection network
      - projected to match the visual feature
    - Text feature
-      Google's WordPiece tokenizer
+    Google's WordPiece tokenizer
 
 
 
@@ -110,7 +114,7 @@
      - \<bounding box coordinates, 2048-d region-of-interest\>
      - projection
 
-       <img src="images\LXMERT_image_feature.png" width="200" />
+     <img src="images\LXMERT_image_feature.png" width="200" />
    - Text feature
 
      <img src="images\LXMERT_text_feature.png" width="200" />
@@ -126,13 +130,13 @@
    - Pretrain dataset: COCO (100k)
    - Pretrain tasks:
      - Task-Agnostic Pretraining
-       - MLM with only text masked
-       - Sentence-image matching (Cross-modality Matching) **with only [CLS] output**
+     - MLM with only text masked
+     - Sentence-image matching (Cross-modality Matching) **with only [CLS] output**
      - Task-Specific Pretraining
-       using MLM with task-specific dataset, which help adapting to the new target domain.
+     using MLM with task-specific dataset, which help adapting to the new target domain.
    - Features
      - Image feature (Fast R-CNN)
-       visual feature representation: bounding region feature + segment embedding + position embedding
+     visual feature representation: bounding region feature + segment embedding + position embedding
      - Text feature: same as BERT
 
 
@@ -154,13 +158,13 @@
    - Features
 
      - Visual Feature Embedding (Fast R-CNN)
-       - visual appearance embedding: 2048-d feature
-         For **Non-visual elements**, they're obtained by RoI covering the whole input image.
-       - visual geometry embedding: <!-- $(\frac{x_{LT}}{W}, \frac{y_{LT}}{H}, \frac{x_{RB}}{W}, \frac{y_{RB}}{H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_%7BLT%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BLT%7D%7D%7BH%7D%2C%20%5Cfrac%7Bx_%7BRB%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BRB%7D%7D%7BH%7D)"> to 2048-d representation by computing sine and cosine of different wavelengths according to "Relation networks for object detection"
+     - visual appearance embedding: 2048-d feature
+     For **Non-visual elements**, they're obtained by RoI covering the whole input image.
+     - visual geometry embedding: <!-- $(\frac{x_{LT}}{W}, \frac{y_{LT}}{H}, \frac{x_{RB}}{W}, \frac{y_{RB}}{H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_%7BLT%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BLT%7D%7D%7BH%7D%2C%20%5Cfrac%7Bx_%7BRB%7D%7D%7BW%7D%2C%20%5Cfrac%7By_%7BRB%7D%7D%7BH%7D)"> to 2048-d representation by computing sine and cosine of different wavelengths according to "Relation networks for object detection"
 
      - Token Embedding
-       - WordPiece Embedding
-         For **Visual elements**, a special [IMG] is assigned.
+     - WordPiece Embedding
+     For **Visual elements**, a special [IMG] is assigned.
      - Segment Embedding: Learnable
      - Sequence Position Embedding: Learnable
 
@@ -181,8 +185,8 @@
 
    - Features
      - Image feature (Fast R-CNN)
-       - [IMG] token + segment embedding + position embedding + next term
-       - <!-- $(\frac{x_1}{W}, \frac{y_1}{H}, \frac{x_2}{W}, \frac{y_2}{H}, \frac{(y_2-y_1)(x_2-x_1)}{W\cdot H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_1%7D%7BW%7D%2C%20%5Cfrac%7By_1%7D%7BH%7D%2C%20%5Cfrac%7Bx_2%7D%7BW%7D%2C%20%5Cfrac%7By_2%7D%7BH%7D%2C%20%5Cfrac%7B(y_2-y_1)(x_2-x_1)%7D%7BW%5Ccdot%20H%7D)">, visual feature --separately--> embedding space using FC, then added up
+     - [IMG] token + segment embedding + position embedding + next term
+     - <!-- $(\frac{x_1}{W}, \frac{y_1}{H}, \frac{x_2}{W}, \frac{y_2}{H}, \frac{(y_2-y_1)(x_2-x_1)}{W\cdot H})$ --> <img src="https://render.githubusercontent.com/render/math?math=(%5Cfrac%7Bx_1%7D%7BW%7D%2C%20%5Cfrac%7By_1%7D%7BH%7D%2C%20%5Cfrac%7Bx_2%7D%7BW%7D%2C%20%5Cfrac%7By_2%7D%7BH%7D%2C%20%5Cfrac%7B(y_2-y_1)(x_2-x_1)%7D%7BW%5Ccdot%20H%7D)">, visual feature --separately--> embedding space using FC, then added up
      - Text feature: same as BERT
 
 
@@ -392,20 +396,20 @@ https://github.com/facebookresearch/mmf
   - Locality Sensitive Hashing Attention (LSHA)
     - Weight approximation
 
-      For each query <!-- $q_i$ --> <img src="https://render.githubusercontent.com/render/math?math=q_i">, the attention is computed as: <!-- $softmax(\frac{q_i \cdot K^T}{\sqrt{d_k}}) \cdot V$ --> <img src="https://render.githubusercontent.com/render/math?math=softmax(%5Cfrac%7Bq_i%20%5Ccdot%20K%5ET%7D%7B%5Csqrt%7Bd_k%7D%7D)%20%5Ccdot%20V">. 
-      
-      As softmax: <!-- $softmax(x)_i = \frac {e^{x_i}}{\sum _j e^{x_j}}$ --> <img src="https://render.githubusercontent.com/render/math?math=softmax(x)_i%20%3D%20%5Cfrac%20%7Be%5E%7Bx_i%7D%7D%7B%5Csum%20_j%20e%5E%7Bx_j%7D%7D">, the several largest term can roughly approximate the value.
+    For each query <!-- $q_i$ --> <img src="https://render.githubusercontent.com/render/math?math=q_i">, the attention is computed as: <!-- $softmax(\frac{q_i \cdot K^T}{\sqrt{d_k}}) \cdot V$ --> <img src="https://render.githubusercontent.com/render/math?math=softmax(%5Cfrac%7Bq_i%20%5Ccdot%20K%5ET%7D%7B%5Csqrt%7Bd_k%7D%7D)%20%5Ccdot%20V">. 
+    
+    As softmax: <!-- $softmax(x)_i = \frac {e^{x_i}}{\sum _j e^{x_j}}$ --> <img src="https://render.githubusercontent.com/render/math?math=softmax(x)_i%20%3D%20%5Cfrac%20%7Be%5E%7Bx_i%7D%7D%7B%5Csum%20_j%20e%5E%7Bx_j%7D%7D">, the several largest term can roughly approximate the value.
 
-      \[10, 7, 1, 0 ,2\] ---softmax---> [95%, 4.7%, 0.012%, 0.0043%, 0.032%]
+    \[10, 7, 1, 0 ,2\] ---softmax---> [95%, 4.7%, 0.012%, 0.0043%, 0.032%]
     - Shared-QK Transformer
 
-      For each k, q, let <!-- $k_i=q_i=\frac{q_i}{||q_i||}$ --> <img src="https://render.githubusercontent.com/render/math?math=k_i%3Dq_i%3D%5Cfrac%7Bq_i%7D%7B%7C%7Cq_i%7C%7C%7D">
+    For each k, q, let <!-- $k_i=q_i=\frac{q_i}{||q_i||}$ --> <img src="https://render.githubusercontent.com/render/math?math=k_i%3Dq_i%3D%5Cfrac%7Bq_i%7D%7B%7C%7Cq_i%7C%7C%7D">
 
-      > Does not affect transformer performance.
+    > Does not affect transformer performance.
 
     - LSH bucket
 
-      Split queries and keys into different buckets. Each query only attend to keys in the same bucket.
+    Split queries and keys into different buckets. Each query only attend to keys in the same bucket.
 
 - Complexity: ref to the Table 3 of paper.
 
@@ -504,6 +508,52 @@ https://github.com/facebookresearch/mmf
 [[paper]](https://arxiv.org/abs/2103.14030)  [[code]](https://github.com/microsoft/Swin-Transformer) *MSRA*
 
 ---
+
+
+### Transformer GAN
+
+#### TransGAN: Two Transformers Can Make One Strong GAN [Arxiv 2021/02]
+
+[[paper]](https://arxiv.org/abs/2102.07074)  [[code]](https://github.com/VITA-Group/TransGAN)
+
+1. Architecture: Transformer-only
+    <img src="images\TransGAN.png" style="zoom:43%;" />
+    
+    - Up-sampling in Generator: **pixelshuffle** module from "Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network (CVPR 2016)"
+    <img src="images\PixelShuffle.png" style="zoom:43%;" />
+    
+2. Tricks
+    - Data augmentation
+    - Super-resolution co-training
+
+        <img src="images\TransGAN_sr_cotraining.png" style="zoom:43%;" />
+    - Locality-Aware Initialization for Self-Attention
+
+        <img src="images\TransGAN_locality.png" style="zoom:43%;" />
+    - Ablations
+
+        <img src="images\TransGAN_ablation.png" style="zoom:43%;" />
+3. Results
+    - Scaling up model
+    
+        <img src="images\TransGAN_scale_up_rs.png" style="zoom:43%;" />
+    
+    - Comparison with other model
+
+        <img src="images\TransGAN_comp_rs.png" style="zoom:43%;" />
+  
+
+
+#### GANsformer: Generative Adversarial Transformers [Arxiv 2021/03]
+
+[[paper]](https://arxiv.org/abs/2103.01209) [[code]](https://github.com/dorarad/gansformer) *Stanford* & *Facebook*
+
+
+#### TFill: Image Completion via a Transformer-Based Architecture [Arxiv 2021/04]
+[[paper]](https://arxiv.org/abs/2104.00845) [[code]](https://github.com/lyndonzheng/TFill) **Code will be released in July** *MIT*
+
+---
+
 
 ### Transformer Visualizations
 
