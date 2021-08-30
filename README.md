@@ -54,6 +54,7 @@
     - [Image Transformer [ICML 2018]](#image-transformer-icml-2018)
     - [Sparse Transformer: Generating Long Sequences with Sparse Transformers [arXiv 2019/04]](#sparse-transformer-generating-long-sequences-with-sparse-transformers-arxiv-201904)
     - [Axial Transformer: Axial Attention in Multidimensional Transformers [arXiv 2019/12]](#axial-transformer-axial-attention-in-multidimensional-transformers-arxiv-201912)
+    - [Fastformer: Additive Attention Can Be All You Need [arXiv 2021/08]](#fastformer-additive-attention-can-be-all-you-need-arxiv-202108)
   - [Image Transformers](#image-transformers)
     - [ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Under review of ICLR 2021]](#vit-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale-under-review-of-iclr-2021)
     - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Arxiv 2021/03]](#swin-transformer-hierarchical-vision-transformer-using-shifted-windows-arxiv-202103)
@@ -494,6 +495,11 @@ https://github.com/facebookresearch/mmf
 #### Axial Transformer: Axial Attention in Multidimensional Transformers [arXiv 2019/12]
 
 [[paper]](https://arxiv.org/abs/1912.12180) [[code]](https://github.com/lucidrains/axial-attention) *UCB, Google Brain*
+
+#### Fastformer: Additive Attention Can Be All You Need [arXiv 2021/08]
+
+[[paper]](https://arxiv.org/abs/2108.09084) [[code]](https://github.com/wilile26811249/Fastformer-PyTorch) *Tsinghua University, MSRA*
+
 
 ---
 
