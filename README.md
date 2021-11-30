@@ -1,77 +1,6 @@
-- [Vision Language Models](#vision-language-models)
-  - [Vision-Language Pretraining](#vision-language-pretraining)
-    - [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks [NeurIPS 2019]](#vilbert-pretraining-task-agnostic-visiolinguistic-representations-for-vision-and-language-tasks-neurips-2019)
-    - [LXMERT: Learning Cross-Modality Encoder Representations from Transformers [EMNLP 2019]](#lxmert-learning-cross-modality-encoder-representations-from-transformers-emnlp-2019)
-    - [VisualBERT: A Simple and Performant Baseline for Vision and Language [arXiv 2019/08, ACL 2020]](#visualbert-a-simple-and-performant-baseline-for-vision-and-language-arxiv-201908-acl-2020)
-    - [VL-BERT: Pre-training of Generic Visual-Linguistic Representations [ICLR 2020]](#vl-bert-pre-training-of-generic-visual-linguistic-representations-iclr-2020)
-    - [Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training [AAAI 2020]](#unicoder-vl-a-universal-encoder-for-vision-and-language-by-cross-modal-pre-training-aaai-2020)
-    - [Unified Vision-Language Pre-Training for Image Captioning and VQA [AAAI 2020]](#unified-vision-language-pre-training-for-image-captioning-and-vqa-aaai-2020)
-    - [UNITER: Learning Universal Image-text Representations [ECCV 2020]](#uniter-learning-universal-image-text-representations-eccv-2020)
-    - [Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks [arXiv 2020/04, ECCV 2020]](#oscar-object-semantics-aligned-pre-training-for-vision-language-tasks-arxiv-202004-eccv-2020)
-    - [Learning Transferable Visual Models From Natural Language Supervision [OpenAI papers 2021/01]](#learning-transferable-visual-models-from-natural-language-supervision-openai-papers-202101)
-  - [Video-Language Pretraining](#video-language-pretraining)
-    - [VideoBERT: A Joint Model for Video and Language Representation Learning [ICCV 2019]](#videobert-a-joint-model-for-video-and-language-representation-learning-iccv-2019)
-    - [Multi-modal Transformer for Video Retrieval [ECCV 2020]](#multi-modal-transformer-for-video-retrieval-eccv-2020)
-    - [HERO: Hierarchical Encoder for Video+Language Omni-representation Pre-training [EMNLP 2020]](#hero-hierarchical-encoder-for-videolanguage-omni-representation-pre-training-emnlp-2020)
-    - [UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation](#univl-a-unified-video-and-language-pre-training-model-for-multimodal-understanding-and-generation)
-  - [Image-Text Retrieval & Matching](#image-text-retrieval--matching)
-    - [ImageBERT: Cross-Modal Pre-training with Large-scale Weak-supervised Image-text Data](#imagebert-cross-modal-pre-training-with-large-scale-weak-supervised-image-text-data)
-    - [Cross-Probe BERT for Efficient AND effective Cross-Modal Search](#cross-probe-bert-for-efficient-and-effective-cross-modal-search)
-    - [Multi-Modality Cross Attention Network for Image and Sentence Matching [ICCV 2020]](#multi-modality-cross-attention-network-for-image-and-sentence-matching-iccv-2020)
-  - [Thinking Fast and Slow: Efficient Text-to-Visual Retrieval with Transformers [CVPR 2021]](#thinking-fast-and-slow-efficient-text-to-visual-retrieval-with-transformers-cvpr-2021)
-  - [Analysis](#analysis)
-    - [12-in-1: Multi-Task Vision and Language Representation Learning [CVPR 2020]](#12-in-1-multi-task-vision-and-language-representation-learning-cvpr-2020)
-    - [Are we pretraining it right? Digging deeper into visio-linguistic pretraining](#are-we-pretraining-it-right-digging-deeper-into-visio-linguistic-pretraining)
-    - [Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models](#behind-the-scene-revealing-the-secrets-of-pre-trained-vision-and-language-models)
-    - [Adaptive Transformers for Learning Multimodal Representations [ACL 2020]](#adaptive-transformers-for-learning-multimodal-representations-acl-2020)
-    - [Data, Architecture, or Losses: What Contributes Most to Multimodal Transformer Success? [TACL 2021]](#data-architecture-or-losses-what-contributes-most-to-multimodal-transformer-success-tacl-2021)
-  - [Survey](#survey)
-    - [Pre-trained Models for Natural Language Processing: A Survey [arXiv 2020/03]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-202003)
-    - [A Survey on Contextual Embeddings [arXiv 2020/03]](#a-survey-on-contextual-embeddings-arxiv-202003)
-    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods [arXiv 2019]](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods-arxiv-2019)
-    - [Deep Multimodal Representation Learning: A Survey [arXiv 2019]](#deep-multimodal-representation-learning-a-survey-arxiv-2019)
-    - [Pre-trained models for natural language processing: A survey [arXiv 2020]](#pre-trained-models-for-natural-language-processing-a-survey-arxiv-2020)
-    - [A Survey on Visual Transformer [arXiv 2020/12]](#a-survey-on-visual-transformer-arxiv-202012)
-  - [Platforms](#platforms)
-    - [facebook MMF](#facebook-mmf)
-- [Transformer](#transformer)
-  - [Efficient Transformers](#efficient-transformers)
-    - [Performer: Rethinking Attention with Performers [arXiv 2020/09, Under review of ICLR 2021]](#performer-rethinking-attention-with-performers-arxiv-202009-under-review-of-iclr-2021)
-    - [Linformer: Self-Attention with Linear Complexity [arXiv 2020/06]](#linformer-self-attention-with-linear-complexity-arxiv-202006)
-    - [Linear Transformer: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention [ICML 2020]](#linear-transformer-transformers-are-rnns-fast-autoregressive-transformers-with-linear-attention-icml-2020)
-    - [Synthesizer: Neural Speech Synthesis with Transformer Network [AAAI 2019]](#synthesizer-neural-speech-synthesis-with-transformer-network-aaai-2019)
-    - [Sinkhorn Transformer: Sparse Sinkhorn Attention [ICML 2020]](#sinkhorn-transformer-sparse-sinkhorn-attention-icml-2020)
-    - [Reformer: The Efficient Transformer [ICLR 2020]](#reformer-the-efficient-transformer-iclr-2020)
-    - [Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context [arXiv 2019/06]](#transformer-xl-attentive-language-models-beyond-a-fixed-length-context-arxiv-201906)
-    - [Compressive Transformers for Long-Range Sequence Modelling [ICLR 2020]](#compressive-transformers-for-long-range-sequence-modelling-iclr-2020)
-    - [Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks [ICML 2019]](#set-transformer-a-framework-for-attention-based-permutation-invariant-neural-networks-icml-2019)
-    - [Longformer: The Long-Document Transformer [arXiv 2020/04]](#longformer-the-long-document-transformer-arxiv-202004)
-    - [Routing Transformer: Efficient Content-Based Sparse Attention with Routing Transformers [arXiv 2020/10]](#routing-transformer-efficient-content-based-sparse-attention-with-routing-transformers-arxiv-202010)
-    - [Big Bird: Transformers for Longer Sequences [NIPS 2020]](#big-bird-transformers-for-longer-sequences-nips-2020)
-    - [Etc: Encoding long and structured data in transformers [EMNLP 2020]](#etc-encoding-long-and-structured-data-in-transformers-emnlp-2020)
-    - [Memory Compressed: Generating Wikipedia by Summarizing Long Sequences [ICLR 2018]](#memory-compressed-generating-wikipedia-by-summarizing-long-sequences-iclr-2018)
-    - [Blockwise Transformer: Blockwise Self-Attention for Long Document Understanding [arXiv 2020/10]](#blockwise-transformer-blockwise-self-attention-for-long-document-understanding-arxiv-202010)
-    - [Image Transformer [ICML 2018]](#image-transformer-icml-2018)
-    - [Sparse Transformer: Generating Long Sequences with Sparse Transformers [arXiv 2019/04]](#sparse-transformer-generating-long-sequences-with-sparse-transformers-arxiv-201904)
-    - [Axial Transformer: Axial Attention in Multidimensional Transformers [arXiv 2019/12]](#axial-transformer-axial-attention-in-multidimensional-transformers-arxiv-201912)
-    - [Fastformer: Additive Attention Can Be All You Need [arXiv 2021/08]](#fastformer-additive-attention-can-be-all-you-need-arxiv-202108)
-  - [Image Transformers](#image-transformers)
-    - [ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Under review of ICLR 2021]](#vit-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale-under-review-of-iclr-2021)
-    - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Arxiv 2021/03]](#swin-transformer-hierarchical-vision-transformer-using-shifted-windows-arxiv-202103)
-  - [Transformer GAN](#transformer-gan)
-    - [TransGAN: Two Transformers Can Make One Strong GAN [Arxiv 2021/02]](#transgan-two-transformers-can-make-one-strong-gan-arxiv-202102)
-    - [GANsformer: Generative Adversarial Transformers [Arxiv 2021/03]](#gansformer-generative-adversarial-transformers-arxiv-202103)
-    - [TFill: Image Completion via a Transformer-Based Architecture [Arxiv 2021/04]](#tfill-image-completion-via-a-transformer-based-architecture-arxiv-202104)
-  - [Transformer Visualizations](#transformer-visualizations)
-    - [Transformer Interpretability Beyond Attention Visualization [Arxiv 2020/12]](#transformer-interpretability-beyond-attention-visualization-arxiv-202012)
-  - [Transformer Internal Essence](#transformer-internal-essence)
-    - [Pretrained Transformers as Universal Computation Engines [Arxiv 2021/03]](#pretrained-transformers-as-universal-computation-engines-arxiv-202103)
-  - [Survey](#survey-1)
-    - [Pre-trained Models for Natural Language Processing: A Survey](#pre-trained-models-for-natural-language-processing-a-survey)
-    - [A Survey on Contextual Embeddings](#a-survey-on-contextual-embeddings)
-    - [Trends in Integration of Vision and Language Research: A Survey of Tasks, Datasets, and Methods](#trends-in-integration-of-vision-and-language-research-a-survey-of-tasks-datasets-and-methods)
-    - [Deep Multimodal Representation Learning: A Survey](#deep-multimodal-representation-learning-a-survey)
-    - [Multimodal Machine Learning: A Survey and Taxonomy](#multimodal-machine-learning-a-survey-and-taxonomy)
+[TOC]
+
+
 
 
 ## Vision Language Models
@@ -97,6 +26,7 @@
      - \<image coordinates (4), area fraction, visual feature\> from pretrained object detection network
      - projected to match the visual feature
    - Text feature
+
     Google's WordPiece tokenizer
 
 
@@ -513,6 +443,24 @@ https://github.com/facebookresearch/mmf
 
 [[paper]](https://arxiv.org/abs/2103.14030)  [[code]](https://github.com/microsoft/Swin-Transformer) *MSRA*
 
+
+
+### Unsupervised Pretraining of Vision Transformer
+
+#### SiT: Self-supervised vIsion Transformer [arXiv 2021/04]
+
+[[paper]](https://arxiv.org/abs/2104.03602) [[code]](https://github.com/Sara-Ahmed/SiT)  *University of Surrey*
+
+#### UP-DETR: Unsupervised Pre-training for Object Detection with Transformers [CVPR 2021]
+
+[[paper]](https://arxiv.org/abs/2011.09094) [[code] ](https://github.com/dddzg/up-detr) *SCUT & Tencent Wechat AI*
+
+#### BEIT: BERT Pre-Training of Image Transformers [arXiv 2021/06]
+
+[[paper]](https://arxiv.org/pdf/2106.08254.pdf) [[code]](https://github.com/microsoft/unilm/tree/master/beit) *Microsoft*
+
+
+
 ---
 
 
@@ -547,7 +495,7 @@ https://github.com/facebookresearch/mmf
     - Comparison with other model
 
         <img src="images\TransGAN_comp_rs.png" style="zoom:43%;" />
-  
+
 
 
 #### GANsformer: Generative Adversarial Transformers [Arxiv 2021/03]
